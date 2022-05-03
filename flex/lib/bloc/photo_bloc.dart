@@ -27,6 +27,10 @@ class PhotoBloc extends Bloc<PhotoEvent, PhotoState> with HydratedMixin {
             emit(state.copyWith(status: Status.success, images: success)));
   }
 
+  Iterable<T> myFunc(Iterable<T?> iterable) {
+    if (Iterable<T?> != null) return iterable;
+  }
+
   @override
   PhotoState? fromJson(Map<String, dynamic> json) {
     return PhotoState(
